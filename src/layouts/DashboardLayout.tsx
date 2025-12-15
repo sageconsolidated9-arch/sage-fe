@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Sidebar from "../shared/Sidebar";
+// layouts/DashboardLayout.tsx
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Topbar from "../shared/Topbar";
+import { useSidebarStore } from "../store/sidebarStore";
+import Sidebar from "../shared/Sidebar";
 
 const DashboardLayout = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const { isSidebarOpen, setIsMobile, toggleSidebar } = useSidebarStore();
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -15,25 +16,12 @@ const DashboardLayout = () => {
     checkIfMobile();
     window.addEventListener("resize", checkIfMobile);
     return () => window.removeEventListener("resize", checkIfMobile);
-  }, []);
+  }, [setIsMobile]);
 
-  useEffect(() => {
-    if (isMobile) {
-      setIsSidebarOpen(false);
-    }
-  }, [isMobile]);
-
-  const toggleSidebar = () => {
-    if (!isMobile) {
-      setIsSidebarOpen(!isSidebarOpen);
-    }
-  };
-
-  const isOpen = isMobile ? false : isSidebarOpen;
   return (
     <div className="flex h-screen bg-[#FAFAFA]">
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <main className="flex-1 overflow-auto">
+      <Sidebar />
+      <main className="flex-1 overflow-auto custom-scrollbar">
         <div className="flex flex-col">
           <div className="sticky top-0 z-50">
             <Topbar toggleSidebar={toggleSidebar} />

@@ -561,8 +561,86 @@ export const PlusIcon: React.FC<{ className?: string }> = ({ className }) => (
     <path
       d="M12 6V12V18M18 12H6"
       stroke="currentColor"
-      stroke-width="1.6"
-      stroke-linecap="round"
+      strokeWidth="1.6"
+      strokeLinecap="round"
     />
+  </svg>
+);
+
+interface ToggleIconProps {
+  className?: string;
+  width?: number | string;
+  height?: number | string;
+  fillColor?: string;
+  backgroundColor?: string;
+}
+
+export const ToggleIcon: React.FC<ToggleIconProps> = ({
+  className,
+  width = 24,
+  height = 24,
+  fillColor = "#242220",
+  backgroundColor = "#DAD3CE",
+}) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <foreignObject x="-180" y="-180" width="384" height="384">
+      <div
+        style={{
+          backdropFilter: "blur(90px)",
+          clipPath: "url(#bgblur_0_2655_246_clip_path)",
+          height: "100%",
+          width: "100%",
+        }}
+      />
+    </foreignObject>
+    <g data-figma-bg-blur-radius="180">
+      <rect
+        x="1.04907e-06"
+        y="24"
+        width="24"
+        height="24"
+        rx="12"
+        transform="rotate(-90 1.04907e-06 24)"
+        fill={backgroundColor}
+      />
+      <rect
+        x="0.250001"
+        y="23.75"
+        width="23.5"
+        height="23.5"
+        rx="11.75"
+        transform="rotate(-90 0.250001 23.75)"
+        stroke="#F5EFEB"
+        strokeOpacity="0.32"
+        strokeWidth="0.5"
+        style={{ mixBlendMode: "luminosity" }}
+      />
+      <path
+        opacity="0.8"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.0524 12.0009L14.5502 7.46527C14.8831 7.12914 14.8831 6.58702 14.5502 6.25089C14.3916 6.09032 14.1752 6 13.9495 6C13.7239 6 13.5075 6.09032 13.3489 6.25089L8.25041 11.3928C7.91645 11.7286 7.91645 12.2714 8.25041 12.6072L13.3487 17.7491C13.5075 17.9097 13.7239 18 13.9495 18C14.1752 18 14.3916 17.9097 14.5504 17.7491C14.8831 17.4129 14.8831 16.8708 14.55 16.5347L10.0524 12.0009Z"
+        fill={fillColor}
+      />
+    </g>
+    <defs>
+      <clipPath id="bgblur_0_2655_246_clip_path" transform="translate(180 180)">
+        <rect
+          x="1.04907e-06"
+          y="24"
+          width="24"
+          height="24"
+          rx="12"
+          transform="rotate(-90 1.04907e-06 24)"
+        />
+      </clipPath>
+    </defs>
   </svg>
 );
