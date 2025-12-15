@@ -11,9 +11,13 @@ import {
   ChevronUpIcon,
   LogoIcon,
   LogoText,
+  PlusIcon,
+  ThemesIcon,
 } from "../utils/icons";
 import { useState } from "react";
 import { div } from "motion/react-client";
+import Button from "../components/props/Button";
+import Toggle from "../components/props/Toggle";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -128,7 +132,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
     },
   };
 
-  // Function to get count for a route - FIXED
+  // Function to get count for a route
   const getCountForRoute = (routeName: string): number | null => {
     const countKey = routeName.toLowerCase().replace(/[^a-z]/g, "");
     return counts[countKey as keyof typeof counts] || null;
@@ -150,7 +154,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
       <div className="w-full h-0.5 border-line opacity-25"></div>
 
       {/* Navigation Links */}
-      <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+      <nav className="flex-1 p-4 space-y-2 overflow-y-auto custom-scrollbar">
         {Object.entries(groups).map(([key, routes]) => (
           <div key={key}>
             <AnimatePresence mode="wait">
@@ -200,7 +204,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
                               (child) => location.pathname === child.path
                             )
                               ? "bg-[#f2f2f2] text-primary"
-                              : "text-[#24222099] hover:bg-[#f2f2f2] hover:text-primary"
+                              : "text-[#24222099] bg-white hover:bg-[#f2f2f2] hover:text-primary"
                           }`}
                         >
                           <Icon
@@ -319,8 +323,52 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
         ))}
       </nav>
 
-      {/* Logout Button */}
+      {/* other sidebar settings */}
       <div className="px-4">
+        {/* connect data */}
+        <div className="px-2">
+          <div className="border border-[#ff9000] bg-white/12 py-6 px-4 rounded-[28px] w-full grid place-items-center gap-y-5">
+            <div>
+              <h1 className="text-center font-semibold text-[#242220] leading-[156%] tracking-[1%]">
+                Let's start!
+              </h1>
+              <p className="text-center max-w-44 mx-auto font-medium text-[13px] leading-[160%] text-[#2422208F]">
+                Connecting a Data Sources cant be easier, let get you started
+              </p>
+            </div>
+
+            <div className="w-fit">
+              <Button
+                lineHeight="leading-[130px]"
+                paddingX="px-6"
+                paddingY="py-[11px]"
+                icon={<PlusIcon />}
+                textSize="text-sm"
+                shadow="shadow-button-light"
+              >
+                Connect Data
+              </Button>
+            </div>
+          </div>
+        </div>
+        {/* themes */}
+        <div className="flex items-center justify-between mt-6">
+          {/* icon and text */}
+          <div className="flex px-2 items-center gap-4 text-[#2422208F]">
+            <div>
+              <ThemesIcon />
+            </div>
+
+            <p className="text-sm font-medium leading-5 font-inter">Themes</p>
+          </div>
+
+          <div>
+            <Toggle size="sm" />
+          </div>
+        </div>
+
+        <div className="w-full h-0.5 border-line opacity-25 my-5"></div>
+
         {/* profile */}
         <div className="p-2 w-full flex items-center gap-6">
           <div className="flex items-center gap-2">
