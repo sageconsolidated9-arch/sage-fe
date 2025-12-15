@@ -1,13 +1,7 @@
 import React from "react";
-import RulesMenu from "../../shared/RulesMenu";
 
 const Dashboard = () => {
-  return (
-    <div>
-      Dashboard
-      <RulesMenu />
-    </div>
-  );
+  return <div>Dashboard</div>;
 };
 
 export default Dashboard;
