@@ -1,33 +1,26 @@
-// components/sidebar/ProfileModal.tsx
+// components/modals/AiTypeModal.tsx
 import { motion, AnimatePresence } from "motion/react";
-
+import { StarsIcon, XIcon } from "../../../utils/icons";
 import { useNavigate } from "react-router-dom";
-import { backdropVariants, modalVariants } from "../../shared/sidebar/variants";
-import { PROFILE_MENU_ITEMS } from "../../types/sidebar-types";
+import { AI_ITEMS } from "../../../types/sidebar-types";
 
-interface ProfileModalProps {
+interface AiTypeModalProps {
   isOpen: boolean;
   position: { top: number; left: number } | null;
   onClose: () => void;
 }
 
-const ProfileModal = ({ isOpen, position, onClose }: ProfileModalProps) => {
+const AiTypeModal = ({ isOpen, position, onClose }: AiTypeModalProps) => {
   const navigate = useNavigate();
 
   const handleMenuItemClick = (itemId: string) => {
     // Handle navigation or actions based on menu item
     switch (itemId) {
-      case "profile":
-        navigate("/profile");
+      case "explainer":
+        navigate("/ai/explainer-ai");
         break;
-      case "users":
-        navigate("/settings/users");
-        break;
-      case "organization":
-        navigate("/settings/organization");
-        break;
-      case "billing":
-        navigate("/billing");
+      case "sage":
+        navigate("/ai/sage-ai");
         break;
       default:
         break;
@@ -45,30 +38,27 @@ const ProfileModal = ({ isOpen, position, onClose }: ProfileModalProps) => {
         {/* Backdrop */}
         <motion.div
           className="fixed inset-0 bg-transparent z-80"
-          variants={backdropVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           onClick={onClose}
         />
 
-        {/* Modal Tooltip */}
+        {/* Modal */}
         <motion.div
-          className="fixed z-100 bg-white rounded-2xl border border-white min-w-[166px] py-2 px-1 modal-shadow"
+          className="fixed z-100 bg-white rounded-2xl border border-gray-200 shadow-top-search w-[130px] max-h-[88px] overflow-y-auto px-1"
           style={{
-            top: `${position.top - 190}px`, // Position below the chevron icon
-            left: `${position.left + 10}px`, // Position to align with the right edge
+            top: `${position.top + 10}px`,
+            left: `${position.left - 70}px`,
           }}
-          variants={modalVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          transition={{ duration: 0.15 }}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Modal Content */}
           <div className="py-2">
-            {PROFILE_MENU_ITEMS.map((item) => (
+            {AI_ITEMS.map((item) => (
               <div key={item.id}>
                 {item.divider ? (
                   <div className="w-full h-px bg-[#2422200F] my-2" />
@@ -98,4 +88,4 @@ const ProfileModal = ({ isOpen, position, onClose }: ProfileModalProps) => {
   );
 };
 
-export default ProfileModal;
+export default AiTypeModal;

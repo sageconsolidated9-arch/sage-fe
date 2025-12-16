@@ -39,6 +39,8 @@
   /* shadows */
   --shadow-button-default: 0px 1px 2px 0px #00000014;
   --shadow-button-light: 0px 4px 24px 0px #cc64064d;
+  --shadow-top-bar: 0px 11px 18.9px -2px #1e1a190f;
+  --shadow-top-search: 0px 4.36px 46.3px 11px rgba(50, 28, 31, 0.12);
 
   /* font */
   --font-primary: "Montserrat", sans-serif;
@@ -57,7 +59,7 @@
 
 .modal-shadow {
   backdrop-filter: blur(160px);
-  box-shadow: 0px 48px 64px -32px #00000033;
+  box-shadow: 0px 48px 64px -32px #321c1f61;
 }
 
 .search-shadow {

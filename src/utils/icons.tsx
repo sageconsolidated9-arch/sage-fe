@@ -567,6 +567,47 @@ export const PlusIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
+export const SearchIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M21 21L16.66 16.66M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+      stroke="currentColor"
+      stroke-opacity="0.6"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const ChevronDownIcon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M6 9L12 15L18 9"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 interface ToggleIconProps {
   className?: string;
   width?: number | string;
@@ -640,6 +681,326 @@ export const ToggleIcon: React.FC<ToggleIconProps> = ({
           rx="12"
           transform="rotate(-90 1.04907e-06 24)"
         />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const StarsIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9.18084 2.34537C9.21654 2.1542 9.31798 1.98155 9.46758 1.8573C9.61719 1.73305 9.80553 1.66504 10 1.66504C10.1945 1.66504 10.3828 1.73305 10.5324 1.8573C10.682 1.98155 10.7835 2.1542 10.8192 2.34537L11.695 6.97704C11.7572 7.30633 11.9172 7.60922 12.1542 7.84618C12.3912 8.08314 12.694 8.24316 13.0233 8.30537L17.655 9.1812C17.8462 9.21691 18.0188 9.31835 18.1431 9.46795C18.2673 9.61755 18.3353 9.8059 18.3353 10.0004C18.3353 10.1948 18.2673 10.3832 18.1431 10.5328C18.0188 10.6824 17.8462 10.7838 17.655 10.8195L13.0233 11.6954C12.694 11.7576 12.3912 11.9176 12.1542 12.1546C11.9172 12.3915 11.7572 12.6944 11.695 13.0237L10.8192 17.6554C10.7835 17.8465 10.682 18.0192 10.5324 18.1434C10.3828 18.2677 10.1945 18.3357 10 18.3357C9.80553 18.3357 9.61719 18.2677 9.46758 18.1434C9.31798 18.0192 9.21654 17.8465 9.18084 17.6554L8.305 13.0237C8.2428 12.6944 8.08277 12.3915 7.84581 12.1546C7.60885 11.9176 7.30596 11.7576 6.97667 11.6954L2.345 10.8195C2.15384 10.7838 1.98118 10.6824 1.85693 10.5328C1.73269 10.3832 1.66467 10.1948 1.66467 10.0004C1.66467 9.8059 1.73269 9.61755 1.85693 9.46795C1.98118 9.31835 2.15384 9.21691 2.345 9.1812L6.97667 8.30537C7.30596 8.24316 7.60885 8.08314 7.84581 7.84618C8.08277 7.60922 8.2428 7.30633 8.305 6.97704L9.18084 2.34537Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M16.6666 1.66699V5.00033"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M18.3333 3.33301H15"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.33329 18.3333C4.25377 18.3333 4.99996 17.5871 4.99996 16.6667C4.99996 15.7462 4.25377 15 3.33329 15C2.41282 15 1.66663 15.7462 1.66663 16.6667C1.66663 17.5871 2.41282 18.3333 3.33329 18.3333Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const WorldIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M22 12C22 17.5228 17.5228 22 12 22M22 12C22 6.47715 17.5228 2 12 2M22 12H2M12 22C6.47715 22 2 17.5228 2 12M12 22C9.43223 19.3038 8 15.7233 8 12C8 8.27674 9.43223 4.69615 12 2M12 22C14.5678 19.3038 16 15.7233 16 12C16 8.27674 14.5678 4.69615 12 2M2 12C2 6.47715 6.47715 2 12 2"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const NotificationIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10.2681 21C10.4436 21.304 10.6961 21.5565 11.0001 21.732C11.3041 21.9075 11.649 21.9999 12.0001 21.9999C12.3511 21.9999 12.696 21.9075 13 21.732C13.3041 21.5565 13.5565 21.304 13.7321 21"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.262 15.326C3.13137 15.4692 3.04516 15.6472 3.01386 15.8385C2.98256 16.0298 3.00752 16.226 3.08571 16.4034C3.1639 16.5807 3.29194 16.7316 3.45426 16.8375C3.61658 16.9434 3.80618 16.9999 4 17H20C20.1938 17.0001 20.3834 16.9438 20.5459 16.8381C20.7083 16.7324 20.8365 16.5817 20.9149 16.4045C20.9933 16.2273 21.0185 16.0311 20.9874 15.8398C20.9564 15.6485 20.8704 15.4703 20.74 15.327C19.41 13.956 18 12.499 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.499 4.589 13.956 3.262 15.326Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const AiChatIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M20 13V14C20 15.8638 20 16.7956 19.6955 17.5307C19.2895 18.5108 18.5108 19.2895 17.5307 19.6955C16.7956 20 15.8638 20 14 20H10C8.13623 20 7.20435 20 6.46927 19.6955C5.48915 19.2895 4.71046 18.5108 4.30448 17.5307C4 16.7956 4 15.8638 4 14V13C4 12.0707 4 11.606 4.07686 11.2196C4.39249 9.63288 5.63288 8.39249 7.21964 8.07686C7.60603 8 8.07069 8 9 8"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12 6.34315C12 5.04906 13.0491 4 14.3431 4H18C18.4645 4 18.6968 4 18.8911 4.03078C19.9608 4.20021 20.7998 5.03918 20.9692 6.10891C21 6.30325 21 6.5355 21 7C21 7.4645 21 7.69675 20.9692 7.89109C20.7998 8.96082 19.9608 9.79979 18.8911 9.96922C18.6968 10 18.4645 10 18 10H14.4142C14.149 10 13.8946 10.1054 13.7071 10.2929C13.0771 10.9229 12 10.4767 12 9.58579V6.34315Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <circle cx="9" cy="14" r="1" fill="currentColor" />
+    <circle cx="15" cy="14" r="1" fill="currentColor" />
+    <path
+      d="M20 14L21 14"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3 14L4 14"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const AngleDownIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="10"
+    height="7"
+    viewBox="0 0 10 7"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.242601 1.65079C-0.313405 1.00212 0.147504 0 1.00186 0H8.65342C9.50777 0 9.96868 1.00212 9.41267 1.65079L5.58689 6.1142C5.1878 6.57981 4.46748 6.57981 4.06838 6.1142L0.242601 1.65079Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const ActionIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M13.5118 4.15199L14.68 2.98386C15.3251 2.33871 16.3711 2.33871 17.0162 2.98386C17.6614 3.629 17.6614 4.67498 17.0162 5.32013L15.8481 6.48826M13.5118 4.15199L9.15027 8.51354C8.27919 9.38463 7.84364 9.82018 7.54706 10.3509C7.25048 10.8817 6.95208 12.1349 6.66675 13.3333C7.86515 13.048 9.11841 12.7496 9.64916 12.453C10.1799 12.1564 10.6154 11.7209 11.4865 10.8498L15.8481 6.48826M13.5118 4.15199L15.8481 6.48826"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M17.5 10C17.5 13.5355 17.5 15.3033 16.4016 16.4016C15.3033 17.5 13.5355 17.5 10 17.5C6.46447 17.5 4.6967 17.5 3.59835 16.4016C2.5 15.3033 2.5 13.5355 2.5 10C2.5 6.46447 2.5 4.6967 3.59835 3.59835C4.6967 2.5 6.46447 2.5 10 2.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+    />
+  </svg>
+);
+
+export const FilterSearchIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_2424_43800)">
+      <path
+        d="M17.8029 18.0303C18.0958 18.3232 18.5707 18.3232 18.8636 18.0303C19.1565 17.7374 19.1565 17.2626 18.8636 16.9697L18.3333 17.5L17.8029 18.0303ZM16.3333 15.5L15.8029 16.0303L17.8029 18.0303L18.3333 17.5L18.8636 16.9697L16.8636 14.9697L16.3333 15.5ZM17.3333 12H18.0833C18.0833 9.1005 15.7327 6.75 12.8333 6.75V7.5V8.25C14.9043 8.25 16.5833 9.92893 16.5833 12H17.3333ZM12.8333 7.5V6.75C9.93376 6.75 7.58325 9.1005 7.58325 12H8.33325H9.08325C9.08325 9.92893 10.7622 8.25 12.8333 8.25V7.5ZM8.33325 12H7.58325C7.58325 14.8995 9.93376 17.25 12.8333 17.25V16.5V15.75C10.7622 15.75 9.08325 14.0711 9.08325 12H8.33325ZM12.8333 16.5V17.25C15.7327 17.25 18.0833 14.8995 18.0833 12H17.3333H16.5833C16.5833 14.0711 14.9043 15.75 12.8333 15.75V16.5Z"
+        fill="currentColor"
+      />
+      <path
+        d="M1.66675 8.33301L5.83341 8.33304"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M1.66675 14.167H5.83341"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M1.66675 2.5H15.8334"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_2424_43800">
+        <rect width="20" height="20" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const ArrowUpRightIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11 5L4 12"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M5.33325 4.12527C5.33325 4.12527 10.6985 3.67299 11.5127 4.48719C12.327 5.30139 11.8746 10.6667 11.8746 10.6667"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const RefreshIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M20.0092 2V5.13219C20.0092 5.42605 19.6418 5.55908 19.4537 5.33333C17.6226 3.2875 14.9617 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const XIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M3.52827 3.52827C3.78862 3.26792 4.21073 3.26792 4.47108 3.52827L12.4711 11.5283C12.7314 11.7886 12.7314 12.2107 12.4711 12.4711C12.2107 12.7314 11.7886 12.7314 11.5283 12.4711L3.52827 4.47108C3.26792 4.21073 3.26792 3.78862 3.52827 3.52827Z"
+      fill="currentColor"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12.4712 3.52827C12.2109 3.26792 11.7888 3.26792 11.5284 3.52827L3.52843 11.5283C3.26808 11.7886 3.26808 12.2107 3.52843 12.4711C3.78878 12.7314 4.21089 12.7314 4.47124 12.4711L12.4712 4.47108C12.7316 4.21073 12.7316 3.78862 12.4712 3.52827Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const InfoIcon: React.FC<ToggleIconProps> = ({ className }) => (
+  <svg
+    className={className}
+    width="18"
+    height="20"
+    viewBox="0 0 18 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_2409_80249)">
+      <path
+        d="M9 17.5C13.1421 17.5 16.5 14.1421 16.5 10C16.5 5.85786 13.1421 2.5 9 2.5C4.85786 2.5 1.5 5.85786 1.5 10C1.5 14.1421 4.85786 17.5 9 17.5Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M9 13V10"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M9 7H9.01"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_2409_80249">
+        <rect width="18" height="18" fill="white" transform="translate(0 1)" />
       </clipPath>
     </defs>
   </svg>

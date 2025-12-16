@@ -56,3 +56,8 @@ export const PROFILE_MENU_ITEMS: ProfileMenuItem[] = [
   { id: "organization", label: "Organization Settings" },
   { id: "profile", label: "Profile Settings" },
 ];
+
+export const AI_ITEMS: ProfileMenuItem[] = [
+  { id: "sage", label: "Sage AI" },
+  { id: "explainer", label: "Explainer AI" },
+];

@@ -13,10 +13,11 @@ const Button: React.FC<ButtonProps> = ({
   shadow = "shadow-button-default",
   textSize = "text-base",
   lineHeight = "leading-[100%]",
+  format = "uppercase",
   ...rest
 }) => {
   // Base classes that apply to all variants
-  const baseClasses = `font-semibold rounded-[12px] w-full transition-colors tracking-[2%] flex items-center justify-center gap-2 uppercase ${height} ${paddingX} ${paddingY} ${shadow} ${textSize}`;
+  const baseClasses = `font-semibold rounded-[12px] w-full transition-colors tracking-[2%] flex items-center justify-center gap-2 ${height} ${paddingX} ${paddingY} ${shadow} ${textSize} ${format}`;
 
   // Disabled classes (same for all variants)
   const disabledClasses = "bg-primary-100 text-white cursor-not-allowed";
