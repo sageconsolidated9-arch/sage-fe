@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import SettingsCard from "../../props/SettingsCard";
 import {
   CheckIcon,
+  CircleCheckIcon,
+  CircleFilledCheckIcon,
   EditIcon,
   PortIcon,
   SquaredInfoIcon,
@@ -9,7 +11,6 @@ import {
 import Modal from "../../../props/Modal";
 import Input from "../../../props/Input";
 import Button from "../../../props/Button";
-import { CircleCheckIcon } from "lucide-react";
 import { useOnboardStore } from "../../../../store/onboardStore";
 import {
   calculatePasswordStrength,
@@ -73,7 +74,7 @@ const PasswordChange = () => {
           label="Authenticator App"
           children={
             <div className="flex items-center gap-2">
-              <CheckIcon className="w-[18px] h-[18px] text-success" />
+              <CircleFilledCheckIcon className="w-[18px] h-[18px] text-success" />
               <p>Enabled</p>
             </div>
           }

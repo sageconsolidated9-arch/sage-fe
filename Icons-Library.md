@@ -53,6 +53,8 @@ Available icons for use in the application.
 - `TrendIcon`
 - `DownTrendIcon`
 - `CircleCheckIcon`
+- `CircleFilledCheckIcon`
+- `ResetIcon`
 
 ## Usage Example
 

@@ -1318,3 +1318,42 @@ export const CircleCheckIcon: React.FC<{ className?: string }> = ({
     />
   </svg>
 );
+
+export const CircleFilledCheckIcon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM16.6402 8.2318C17.0645 8.58537 17.1218 9.21593 16.7682 9.64021L11.7682 15.6402C11.5937 15.8497 11.3411 15.9788 11.0691 15.9976C10.797 16.0165 10.5291 15.9234 10.3273 15.74L7.32733 13.0127C6.91868 12.6412 6.88856 12.0087 7.26007 11.6001C7.63157 11.1914 8.26402 11.1613 8.67268 11.5328L10.9002 13.5578L15.2318 8.35984C15.5854 7.93556 16.2159 7.87824 16.6402 8.2318Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const ResetIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    className={className}
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M6.41002 14.8265C8.20937 15.6248 10.3525 15.5815 12.1877 14.5219C15.2368 12.7615 16.2815 8.86259 14.5211 5.81347L14.3336 5.48871M3.47894 12.1886C1.71853 9.13945 2.76324 5.24056 5.81235 3.48015C7.64759 2.42058 9.79068 2.37722 11.59 3.17549M1.87012 12.2513L3.91916 12.8003L4.46819 10.7513M13.532 7.25034L14.0811 5.2013L16.1301 5.75034"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
