@@ -1,11 +1,7 @@
 import React from "react";
 import SettingsCard from "../../props/SettingsCard";
 import { CheckIcon } from "lucide-react";
-import {
-  CircleCheckIcon,
-  CircleFilledCheckIcon,
-  ResetIcon,
-} from "../../../../utils/icons";
+import { CircleFilledCheckIcon, ResetIcon } from "../../../../utils/icons";
 
 const RecoveryOptions = () => {
   return (

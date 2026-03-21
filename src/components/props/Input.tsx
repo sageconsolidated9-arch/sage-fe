@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Eye } from "lucide-react";
 import { getImageSrc } from "../../utils/imageUtils";
 import type { InputProps } from "../../types/extra";
-import { InfoFillIcon } from "../../utils/icons";
+import { InfoFillIcon, SearchIcon } from "../../utils/icons";
 
 const Input: React.FC<InputProps> = ({
   type,
@@ -190,7 +190,7 @@ const Input: React.FC<InputProps> = ({
           <div
             className={`absolute inset-y-0 ${searchPosition === "left" ? "left-0 pl-3" : "right-0 pr-3"} flex items-center pointer-events-none`}
           >
-            <img src={getImageSrc("search.svg")} alt="Search" />
+            <SearchIcon className="w-6 h-6 text-text-muted" />
           </div>
         )}
 

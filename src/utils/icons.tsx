@@ -1252,6 +1252,48 @@ export const ChevronRightIcon: React.FC<{ className?: string }> = ({
   </svg>
 );
 
+export const ChevronRight1Icon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 6L11.4745 7.47451C13.0586 9.05858 13.8506 9.85062 14.1474 10.7639C14.4084 11.5673 14.4084 12.4327 14.1474 13.2361C13.8506 14.1494 13.0586 14.9414 11.4745 16.5255L10 18"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const ChevronDown1Icon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M18 10L16.5255 11.4745C14.9414 13.0586 14.1494 13.8506 13.2361 14.1474C12.4327 14.4084 11.5673 14.4084 10.7639 14.1474C9.85062 13.8506 9.05858 13.0586 7.47452 11.4745L6 10"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 export const InfoFillIcon: React.FC<{ className?: string }> = ({
   className,
 }) => (
@@ -1350,6 +1392,46 @@ export const ResetIcon: React.FC<{ className?: string }> = ({ className }) => (
   >
     <path
       d="M6.41002 14.8265C8.20937 15.6248 10.3525 15.5815 12.1877 14.5219C15.2368 12.7615 16.2815 8.86259 14.5211 5.81347L14.3336 5.48871M3.47894 12.1886C1.71853 9.13945 2.76324 5.24056 5.81235 3.48015C7.64759 2.42058 9.79068 2.37722 11.59 3.17549M1.87012 12.2513L3.91916 12.8003L4.46819 10.7513M13.532 7.25034L14.0811 5.2013L16.1301 5.75034"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const ShieldIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M20 13.0004C20 18.0004 16.5 20.5005 12.34 21.9505C12.1222 22.0243 11.8855 22.0207 11.67 21.9405C7.5 20.5005 4 18.0004 4 13.0004V6.00045C4 5.73523 4.10536 5.48088 4.29289 5.29334C4.48043 5.10581 4.73478 5.00045 5 5.00045C7 5.00045 9.5 3.80045 11.24 2.28045C11.4519 2.09945 11.7214 2 12 2C12.2786 2 12.5481 2.09945 12.76 2.28045C14.51 3.81045 17 5.00045 19 5.00045C19.2652 5.00045 19.5196 5.10581 19.7071 5.29334C19.8946 5.48088 20 5.73523 20 6.00045V13.0004Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M8 12H8.01"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12 12H12.01"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M16 12H16.01"
       stroke="currentColor"
       stroke-width="1.5"
       stroke-linecap="round"

@@ -1,7 +1,8 @@
 import React from "react";
 import { getImageSrc } from "../../utils/imageUtils";
-import { Info } from "lucide-react";
+import { ChevronDown, Info } from "lucide-react";
 import {
+  ChevronDown1Icon,
   ChevronDownIcon,
   ChevronUpDownIcon,
   InfoFillIcon,
@@ -26,7 +27,7 @@ interface CustomSelectInputProps {
   width?: string;
   showInfo?: boolean; // Optional info icon like in the image
   infoTooltip?: string; // Tooltip text for info icon
-  iconVariant?: "down" | "upDown"; // To match the input variants
+  iconVariant?: "down" | "upDown" | "down1"; // To match the input variants
 }
 
 export const Select = ({
@@ -108,6 +109,8 @@ export const Select = ({
         <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none z-1">
           {iconVariant === "upDown" ? (
             <ChevronUpDownIcon className="h-6 w-6 text-text-secondary" />
+          ) : iconVariant === "down1" ? (
+            <ChevronDown1Icon className="h-6 w-6 text-text-secondary" />
           ) : (
             <ChevronDownIcon className="h-6 w-6 text-text-secondary" />
           )}

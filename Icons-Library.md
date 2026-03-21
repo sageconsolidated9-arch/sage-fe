@@ -25,6 +25,8 @@ Available icons for use in the application.
 
 - `ChevronUpIcon`
 - `ChevronDownIcon`
+- `ChevronDown1Icon`
+- `ChevronRight1Icon`
 - `ChevronLeftIcon`
 - `ChevronRightIcon`
 - `ChevronUpDownIcon`
@@ -55,6 +57,7 @@ Available icons for use in the application.
 - `CircleCheckIcon`
 - `CircleFilledCheckIcon`
 - `ResetIcon`
+- `ShieldIcon`
 
 ## Usage Example
 

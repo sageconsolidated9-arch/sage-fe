@@ -27,3 +27,23 @@ export const industries = [
   { label: "Education", value: "education" },
   { label: "Manufacturing", value: "manufacturing" },
 ];
+
+export const themes = [
+  { label: "Auto", value: "auto" },
+  { label: "Light", value: "light" },
+  { label: "Dark", value: "dark" },
+];
+
+export const languages = [
+  { label: "Auto", value: "auto" },
+  { label: "English", value: "en" },
+  { label: "Spanish", value: "es" },
+  { label: "French", value: "fr" },
+  { label: "German", value: "de" },
+];
+
+export const dateFormats = [
+  { label: "MM/DD/YYYY", value: "MM/DD/YYYY" },
+  { label: "DD/MM/YYYY", value: "DD/MM/YYYY" },
+  { label: "YYYY/MM/DD", value: "YYYY/MM/DD" },
+];

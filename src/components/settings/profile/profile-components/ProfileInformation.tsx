@@ -65,7 +65,7 @@ const ProfileInformation = () => {
               label="Industry"
               options={industries}
               placeholder="Select an industry"
-              iconVariant="down"
+              iconVariant="down1"
               // value={profile.industry}
               // onChange={(value) => updateProfile("industry", value)}
             />

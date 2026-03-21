@@ -1,7 +1,12 @@
 import React from "react";
+import IncidentPage from "../../components/incident/IncidentPage";
 
 const Incidents = () => {
-  return <div>Incidents</div>;
+  return (
+    <>
+      <IncidentPage />
+    </>
+  );
 };
 
 export default Incidents;

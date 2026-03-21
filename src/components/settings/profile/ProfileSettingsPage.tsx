@@ -2,6 +2,7 @@ import ProfileHeader from "./profile-components/ProfileHeader";
 import ProfileInformation from "./profile-components/ProfileInformation";
 import PasswordChange from "./profile-components/PasswordChange";
 import RecoveryOptions from "./profile-components/RecoveryOptions";
+import PrefencesLocal from "./profile-components/PrefencesLocal";
 
 const ProfileSettingsPage = () => {
   return (
@@ -22,7 +23,10 @@ const ProfileSettingsPage = () => {
           <RecoveryOptions />
         </div>
       </div>
-      <div className="w-full xlg:w-[62%] bg-amber-700">yello</div>
+      <div className="w-full xlg:w-[62%]">
+        {/* Preferences / Localization */}
+        <PrefencesLocal />
+      </div>
     </div>
   );
 };

@@ -56,7 +56,7 @@ const DashboardPage = () => {
             tabs={tabs}
             activeTab={activeTab}
             onTabChange={setActiveTab}
-            variant="text"
+            variant="underline"
             className="p-2"
           />
         </div>
