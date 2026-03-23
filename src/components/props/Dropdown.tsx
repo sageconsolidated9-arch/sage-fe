@@ -43,11 +43,11 @@ const Dropdown: React.FC<DropdownProps> = ({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all shadow-sm focus:ring-2 focus:ring-primary/20"
+        className="flex items-center gap-2 px-4 py-2 bg-white border border-text-secondary rounded-xl text-sm text-text-primary "
       >
         {placeholder}
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
-          <ChevronDown1Icon />
+          <ChevronDown1Icon className="w-[18px] h-[18px]" />
         </motion.div>
       </button>
 

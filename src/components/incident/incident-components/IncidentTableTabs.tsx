@@ -27,8 +27,8 @@ const IncidentTableTabs = () => {
   ];
 
   const tabs = [
-    { id: "inprogress", label: "In Progress" },
-    { id: "resolved", label: "Resolved" },
+    { id: "inprogress", label: "In Progress", count: 77 },
+    { id: "resolved", label: "Resolved", count: 92 },
   ];
 
   // Logic: Filter data based on search and (optionally) category filters
@@ -83,7 +83,7 @@ const IncidentTableTabs = () => {
                 }}
               />
             </div>
-            <button className="bg-white border border-gray-300 px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all whitespace-nowrap">
+            <button className="bg-white border border-text-secondary px-4 py-2 rounded-xl text-sm text-text-primary whitespace-nowrap">
               Generate Timeline
             </button>
           </div>
@@ -93,16 +93,16 @@ const IncidentTableTabs = () => {
             {filters.map((filter) => (
               <div
                 key={filter}
-                className="flex items-center gap-2 rounded-lg bg-gray-100 py-1.5 px-3 border border-gray-200"
+                className="flex items-center gap-2 rounded-lg bg-hover-light py-1 px-2 "
               >
-                <span className="text-xs font-medium text-gray-600">
+                <span className="text-xs font-medium text-text-primary">
                   {filter}
                 </span>
                 <button
                   onClick={() => removeFilter(filter)}
-                  className="cursor-pointer hover:text-red-500 transition-colors"
+                  className="cursor-pointer"
                 >
-                  <XIcon className="text-gray-400 w-4 h-4" />
+                  <XIcon className="text-text-secondary w-[18px] h-[18px]" />
                 </button>
               </div>
             ))}

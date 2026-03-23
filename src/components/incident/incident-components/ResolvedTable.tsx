@@ -1,12 +1,6 @@
-import React from "react";
-import {
-  mockIncidents,
-  SeverityIndicator,
-  StatusBadge,
-  type Incident,
-} from "../../../utils/incident";
+import { SeverityIndicator, type Incident } from "../../../utils/incident";
 import type { ColumnDef } from "../../../types/table";
-import { ChevronRightIcon } from "../../../utils/icons";
+import { ChevronRight1Icon } from "../../../utils/icons";
 import Table from "../../../shared/Table";
 
 interface TableProps {
@@ -18,12 +12,16 @@ const ResolvedTable = ({ data }: TableProps) => {
     {
       key: "name",
       header: "Incident name",
-      cell: (i) => <span className="text-gray-600 text-sm">{i.name}</span>,
+      cell: (i) => (
+        <span className="text-text-secondary text-sm">{i.name}</span>
+      ),
     },
     {
       key: "source",
       header: "Detection Source:",
-      cell: (i) => <span className="text-gray-500 text-sm">{i.source}</span>,
+      cell: (i) => (
+        <span className="text-text-secondary text-sm">{i.source}</span>
+      ),
     },
     {
       key: "severity",
@@ -34,7 +32,7 @@ const ResolvedTable = ({ data }: TableProps) => {
       key: "resolutionTime",
       header: "Resolution Time",
       cell: (i) => (
-        <span className="text-gray-500 text-sm">{i.resolutionTime}</span>
+        <span className="text-text-secondary text-sm">{i.resolutionTime}</span>
       ),
     },
     {
@@ -42,10 +40,10 @@ const ResolvedTable = ({ data }: TableProps) => {
       header: "Action",
       cell: () => (
         <div className="flex items-center gap-2">
-          <button className="bg-orange-600 text-white px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-orange-700 transition-colors">
+          <button className="bg-primary text-white px-2 py-1 rounded-lg text-xs hover:bg-primary-hover transition-colors cursor-pointer">
             View summary
           </button>
-          <ChevronRightIcon className="text-gray-400" />
+          <ChevronRight1Icon className="text-text-muted" />
         </div>
       ),
     },
@@ -55,7 +53,7 @@ const ResolvedTable = ({ data }: TableProps) => {
     <Table<Incident>
       data={data}
       columns={columns}
-      showHeader={true}
+      showHeader={false}
       className="bg-transparent"
     />
   );

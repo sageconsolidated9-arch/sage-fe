@@ -3,11 +3,9 @@ import Table from "../../../shared/Table";
 import {
   AiChatIcon,
   ChevronRight1Icon,
-  ChevronRightIcon,
   ShieldIcon,
 } from "../../../utils/icons";
 import {
-  mockIncidents,
   SeverityIndicator,
   StatusBadge,
   type Incident,
@@ -23,12 +21,16 @@ const InprogressTable = ({ data }: TableProps) => {
     {
       key: "name",
       header: "Incident name",
-      cell: (i) => <span className="text-gray-600 text-sm">{i.name}</span>,
+      cell: (i) => (
+        <span className="text-text-secondary text-sm">{i.name}</span>
+      ),
     },
     {
       key: "source",
       header: "Detection Source:",
-      cell: (i) => <span className="text-gray-500 text-sm">{i.source}</span>,
+      cell: (i) => (
+        <span className="text-text-secondary text-sm">{i.source}</span>
+      ),
     },
     {
       key: "severity",
@@ -39,7 +41,7 @@ const InprogressTable = ({ data }: TableProps) => {
       key: "timeDetected",
       header: "Time Detected",
       cell: (i) => (
-        <span className="text-gray-500 text-sm">{i.timeDetected}</span>
+        <span className="text-text-secondary text-sm">{i.timeDetected}</span>
       ),
     },
     {

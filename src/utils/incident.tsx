@@ -72,12 +72,7 @@ export const mockIncidents: Incident[] = [
 ];
 
 export const SeverityIndicator = ({ level }: { level: SeverityLevel }) => {
-  const colors = [
-    "bg-blue-200",
-    "bg-orange-400",
-    "bg-orange-600",
-    "bg-red-600",
-  ];
+  const colors = ["bg-info", "bg-warning", "bg-error", "bg-primary-hover"];
   const activeColor = colors[level - 1];
 
   return (
@@ -85,7 +80,7 @@ export const SeverityIndicator = ({ level }: { level: SeverityLevel }) => {
       {[1, 2, 3, 4].map((step) => (
         <div
           key={step}
-          className={`w-3 h-2 rounded-sm ${step <= level ? activeColor : "bg-gray-200"}`}
+          className={`w-[9px] h-[9px] rounded-xs ${step <= level ? activeColor : "bg-border"}`}
         />
       ))}
     </div>
@@ -94,19 +89,17 @@ export const SeverityIndicator = ({ level }: { level: SeverityLevel }) => {
 
 export const StatusBadge = ({ status }: { status: Incident["status"] }) => {
   const styles: Record<string, string> = {
-    New: "bg-green-100 text-green-700 border-green-200",
-    Investigating: "bg-blue-100 text-blue-700 border-blue-200",
-    "Running Playbook": "bg-purple-100 text-purple-700 border-purple-200",
-    Contained: "bg-gray-100 text-gray-700 border-gray-200",
-    "Needs Review": "bg-orange-100 text-orange-700 border-orange-200",
-    "Pending Approval": "bg-red-100 text-red-700 border-red-200",
-    Dismissed: "bg-zinc-700 text-white border-zinc-800",
+    New: "bg-success text-text-primary",
+    Investigating: "bg-info text-text-primary",
+    "Running Playbook": "bg-[#7265FF] text-text-primary",
+    Contained: "bg-border text-text-primary",
+    "Needs Review": "bg-warning text-white",
+    "Pending Approval": "bg-error text-text-primary",
+    Dismissed: "bg-text-secondary text-white",
   };
 
   return (
-    <span
-      className={`px-3 py-1 rounded-lg text-xs font-medium border ${styles[status || "New"]}`}
-    >
+    <span className={`px-2 py-1 rounded-lg text-xs ${styles[status || "New"]}`}>
       {status}
     </span>
   );
