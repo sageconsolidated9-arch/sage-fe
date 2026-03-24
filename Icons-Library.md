@@ -62,6 +62,8 @@ Available icons for use in the application.
 - `DetailsIcon`
 - `RoundXIcon`
 - `NodeIcon`
+- `DeviceIcon`
+- `ActionTakenIcon`
 
 ## Usage Example
 

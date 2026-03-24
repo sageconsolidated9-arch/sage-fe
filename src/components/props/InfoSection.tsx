@@ -4,9 +4,9 @@ interface InfoSectionProps {
 }
 
 export const InfoSection = ({ title, children }: InfoSectionProps) => (
-  <div className="flex flex-col">
+  <div className="flex flex-col gap-1.5">
     <h3 className="text-text-primary">{title}</h3>
-    <div className="flex flex-col gap-y-2">{children}</div>
+    <div className="pb-6 flex flex-col gap-1.5">{children}</div>
   </div>
 );
 
