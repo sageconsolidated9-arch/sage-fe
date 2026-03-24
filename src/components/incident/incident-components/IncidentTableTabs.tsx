@@ -1,14 +1,11 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Tabs from "../../props/Tabs";
 import InprogressTable from "./InprogressTable";
 import ResolvedTable from "./ResolvedTable";
 import Input from "../../props/Input";
-import { Select } from "../../props/Select";
 import { XIcon } from "../../../utils/icons";
 import { mockIncidents } from "../../../utils/incident";
 import Dropdown from "../../props/Dropdown";
-import { industries } from "../../../utils/timezone";
-import Button from "../../props/Button";
 
 const IncidentTableTabs = () => {
   const [activeTab, setActiveTab] = useState("inprogress");
@@ -50,7 +47,7 @@ const IncidentTableTabs = () => {
   };
 
   return (
-    <div className="bg-surface py-[27px] px-[30px] rounded-[18px] shadow-card">
+    <div className="bg-surface py-[27px] px-[30px] rounded-[18px] shadow-card relative overflow-hidden">
       <div className="flex justify-between gap-6 flex-wrap items-start mb-6">
         <Tabs
           tabs={tabs}

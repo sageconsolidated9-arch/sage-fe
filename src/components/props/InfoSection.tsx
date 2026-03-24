@@ -6,7 +6,7 @@ interface InfoSectionProps {
 export const InfoSection = ({ title, children }: InfoSectionProps) => (
   <div className="flex flex-col">
     <h3 className="text-text-primary">{title}</h3>
-    <div className="">{children}</div>
+    <div className="flex flex-col gap-y-2">{children}</div>
   </div>
 );
 

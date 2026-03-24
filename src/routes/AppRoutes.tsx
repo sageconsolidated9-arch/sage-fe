@@ -6,6 +6,7 @@ import NotFound from "../pages/page404";
 import Login from "../pages/auths/login";
 import Onboard from "../pages/auths/onboarding";
 import ProfileSettings from "../pages/settings/profile";
+import IncidentDetails from "../pages/incident/view-details";
 
 const toElement = (Comp?: React.LazyExoticComponent<React.ComponentType>) =>
   Comp ? <Comp /> : <Outlet />;
@@ -55,6 +56,10 @@ const AppRoutes = () => (
 
       {/* routes that are not sidebar */}
       <Route path="/settings/profile" element={<ProfileSettings />} />
+      <Route
+        path="/incidents-&-alerts/view-details"
+        element={<IncidentDetails />}
+      />
     </Route>
 
     <Route path="*" element={<NotFound />} />

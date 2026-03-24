@@ -28,6 +28,7 @@ Available icons for use in the application.
 - `ChevronDown1Icon`
 - `ChevronRight1Icon`
 - `ChevronLeftIcon`
+- `ChevronLeft1Icon`
 - `ChevronRightIcon`
 - `ChevronUpDownIcon`
 - `ChevronDoubleLeftIcon`
@@ -60,6 +61,7 @@ Available icons for use in the application.
 - `ShieldIcon`
 - `DetailsIcon`
 - `RoundXIcon`
+- `NodeIcon`
 
 ## Usage Example
 
