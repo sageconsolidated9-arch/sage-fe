@@ -60,6 +60,8 @@ Available icons for use in the application.
 - `ShieldIcon`
 - `DetailsIcon`
 - `RoundXIcon`
+- `DeviceIcon`
+- `ActionTakenIcon`
 
 ## Usage Example
 

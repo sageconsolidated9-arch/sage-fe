@@ -107,7 +107,7 @@ const Body = ({
   children: ReactNode;
   className?: string;
 }) => (
-  <div className={` overflow-y-auto max-h-[80vh] ${className}`}>{children}</div>
+  <div className={` overflow-y-auto max-h-[50vh] ${className}`}>{children}</div>
 );
 
 const Footer = ({ children }: { children: ReactNode }) => (
