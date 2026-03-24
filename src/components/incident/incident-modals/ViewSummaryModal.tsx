@@ -110,19 +110,19 @@ const ViewSummaryModal = ({ isOpen, setIsOpen }: ViewSummaryModalProps) => {
                   <p>Response Actions Taken</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-6 h-6 text-success" />
                   <p>Trigger automatic forensics snapshot</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-6 h-6 text-success" />
                   <p>Auto-Quarantine applied</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-6 h-6 text-success" />
                   <p>Malicious process terminated</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-6 h-6 text-success" />
                   <p>Connection to external IP blocked</p>
                 </div>
               </div>
