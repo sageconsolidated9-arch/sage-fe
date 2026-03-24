@@ -3,8 +3,8 @@ import Modal from "../../props/Modal";
 import { InfoRow, InfoSection } from "../../props/InfoSection";
 import { SeverityIndicator } from "../../../utils/incident";
 import {
-  ActionTakenIcon,
   AiChatIcon,
+  CircleFilledCheckIcon,
   DeviceIcon,
   RoundXIcon,
   ShieldIcon,
@@ -40,7 +40,7 @@ const ViewSummaryModal = ({ isOpen, setIsOpen }: ViewSummaryModalProps) => {
               <InfoRow
                 label="Current Status"
                 value={
-                  <div className="bg-success py-1 px-2 text-white text-xs rounded-[8px]">
+                  <div className="bg-success py-1 px-2 text-white text-xs rounded-lg">
                     Active
                   </div>
                 }
@@ -51,7 +51,7 @@ const ViewSummaryModal = ({ isOpen, setIsOpen }: ViewSummaryModalProps) => {
               <InfoRow
                 label="Playbook Used"
                 value={
-                  <div className="bg-[#FA4F1933] py-1 px-2 text-primary text-xs rounded-[8px] flex items-center gap-2.5">
+                  <div className="bg-[#FA4F1933] py-1 px-2 text-primary text-xs rounded-lg flex items-center gap-2.5">
                     Quarantine Device
                     <DeviceIcon className="w-4 h-4" />
                   </div>
@@ -65,7 +65,7 @@ const ViewSummaryModal = ({ isOpen, setIsOpen }: ViewSummaryModalProps) => {
                 <div className="text-base ">
                   <p>Timeline of Events</p>
                 </div>
-                <div className="flex flex-col gap-0.5 bg-toast text-text-primary border-[1px] border-input-border rounded-[12px] p-[12px] font-fira-code text-sm leading-[22px] tracking-[0.5%] ">
+                <div className="flex flex-col gap-0.5 bg-toast text-text-primary border border-input-border rounded-xl p-3 font-fira-code text-sm leading-[22px] tracking-[0.5%] ">
                   <p>12:03 AM – Suspicious executable downloaded</p>
                   <p>12:04 AM – EDR flagged ransomware-like behavior</p>
                   <p>12:06 AM – File encryption attempts detected</p>
@@ -110,19 +110,19 @@ const ViewSummaryModal = ({ isOpen, setIsOpen }: ViewSummaryModalProps) => {
                   <p>Response Actions Taken</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <ActionTakenIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
                   <p>Trigger automatic forensics snapshot</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <ActionTakenIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
                   <p>Auto-Quarantine applied</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <ActionTakenIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
                   <p>Malicious process terminated</p>
                 </div>
                 <div className="flex items-center gap-1 text-sm">
-                  <ActionTakenIcon className="w-5 h-5 text-white" />
+                  <CircleFilledCheckIcon className="w-5 h-5 text-white" />
                   <p>Connection to external IP blocked</p>
                 </div>
               </div>
