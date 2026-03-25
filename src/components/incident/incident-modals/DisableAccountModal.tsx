@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import Modal from "../../props/Modal";
 import {
-  AiChatIcon,
-  CircleFilledCheckIcon,
-  DeviceIcon,
   RoundXIcon,
   ShieldIcon,
   SquaredInfoIcon,
 } from "../../../utils/icons";
 import Button from "../../props/Button";
 import { InfoRow, InfoSection } from "../../props/InfoSection";
-import { SeverityIndicator } from "../../../utils/incident";
-import { div } from "motion/react-client";
 import Radio from "../../props/Radio";
 import Checkbox from "../../props/Checkbox";
 import Input from "../../props/Input";

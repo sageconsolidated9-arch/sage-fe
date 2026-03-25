@@ -7,8 +7,7 @@ import { XIcon } from "../../../utils/icons";
 import { mockIncidents } from "../../../utils/incident";
 import Dropdown from "../../props/Dropdown";
 
-const IncidentTableTabs = () => {
-  const [activeTab, setActiveTab] = useState("inprogress");
+const IncidentTableTabs = ({ activeTab, setActiveTab }: any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState([
     "Last 24 Hours",

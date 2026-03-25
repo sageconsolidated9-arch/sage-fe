@@ -1608,3 +1608,60 @@ export const LockIcon: React.FC<{ className?: string }> = ({ className }) => (
     />
   </svg>
 );
+export const InfoCIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    className={className}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12.2666 11C12.8189 11 13.2666 11.4477 13.2666 12V16C13.2666 16.5523 12.8189 17 12.2666 17C11.7143 17 11.2666 16.5523 11.2666 16V12C11.2666 11.4477 11.7143 11 12.2666 11ZM11.2666 8C11.2666 7.44772 11.7143 7 12.2666 7H12.2766C12.8289 7 13.2766 7.44772 13.2766 8C13.2766 8.55228 12.8289 9 12.2766 9H12.2666C11.7143 9 11.2666 8.55228 11.2666 8Z"
+      fill="#A4C1E3"
+    />
+  </svg>
+);
+export const ResolvedIcon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={className}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.60259 13.6214L7.90758 7.3164C8.2249 6.99908 8.38356 6.84042 8.56652 6.78098C8.72745 6.72869 8.90081 6.72869 9.06174 6.78098C9.24469 6.84042 9.40335 6.99908 9.72067 7.3164L11.914 9.50972C12.2313 9.82704 12.39 9.9857 12.5729 10.0451C12.7339 10.0974 12.9072 10.0974 13.0681 10.0451C13.2511 9.9857 13.4098 9.82704 13.7271 9.50972L17.6282 5.60857M1.60259 13.6214H7.21156M1.60259 13.6214V8.01242"
+      stroke="currentColor"
+      stroke-width="1.60256"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+export const ProgressIcon: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <svg
+    className={className}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M17.6282 5.60938L11.3232 11.9144C11.0059 12.2317 10.8472 12.3903 10.6643 12.4498C10.5033 12.5021 10.33 12.5021 10.169 12.4498C9.98608 12.3903 9.82742 12.2317 9.5101 11.9144L7.31678 9.72105C6.99946 9.40373 6.8408 9.24507 6.65784 9.18562C6.49691 9.13333 6.32355 9.13333 6.16262 9.18562C5.97967 9.24507 5.82101 9.40373 5.50368 9.72105L1.60254 13.6222M17.6282 5.60938H12.0192M17.6282 5.60938V11.2183"
+      stroke="currentColor"
+      stroke-width="1.60256"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

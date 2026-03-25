@@ -64,6 +64,9 @@ Available icons for use in the application.
 - `NodeIcon`
 - `DeviceIcon`
 - `ActionTakenIcon`
+- `InfoCIcon`
+- `ProgressIcon`
+- `ResolvedIcon`
 
 ## Usage Example
 
