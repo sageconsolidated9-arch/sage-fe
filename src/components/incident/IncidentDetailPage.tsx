@@ -15,12 +15,17 @@ import { InfoRow, InfoSection } from "../props/InfoSection";
 import { SeverityIndicator } from "../../utils/incident";
 import Button from "../props/Button";
 import { useState } from "react";
+import BlockIpModal from "./incident-modals/BlockIpModal";
+import DisableAccountModal from "./incident-modals/DisableAccountModal";
+import RecommendContainAssetsModal from "./incident-modals/RecommendContainAssetsModal";
 
 const IncidentDetailPage = () => {
   const navigate = useNavigate();
-
   const handleBack = () => navigate(-1);
   const [activeTab, setActiveTab] = useState("Evidence");
+  const [activeModal, setActiveModal] = useState<
+    "CONTAIN_ASSETS" | "BLOCK_IP" | "DISABLE_ACCOUNT" | "INVESTIGATE" | null
+  >(null);
 
   const timelineEvents = [
     "10:42 AM - Multiple failed logins from IP 45.83.12.99",
@@ -473,6 +478,7 @@ const IncidentDetailPage = () => {
           <div className="flex items-center gap-4 pt-4">
             <div>
               <Button
+                onClick={() => setActiveModal("CONTAIN_ASSETS")}
                 paddingX="py-3"
                 paddingY="px-6"
                 icon={<ShieldIcon className="text-white" />}
@@ -482,6 +488,7 @@ const IncidentDetailPage = () => {
             </div>
             <div>
               <Button
+                onClick={() => setActiveModal("BLOCK_IP")}
                 paddingX="py-3"
                 paddingY="px-6"
                 variant="white"
@@ -492,6 +499,7 @@ const IncidentDetailPage = () => {
             </div>
             <div>
               <Button
+                onClick={() => setActiveModal("DISABLE_ACCOUNT")}
                 paddingX="py-3"
                 paddingY="px-6"
                 variant="white"
@@ -513,6 +521,23 @@ const IncidentDetailPage = () => {
           </div>
         </section>
       </div>
+
+      {activeModal === "CONTAIN_ASSETS" && (
+        <RecommendContainAssetsModal
+          isOpen={true}
+          setIsOpen={() => setActiveModal(null)}
+        />
+      )}
+      {activeModal === "BLOCK_IP" && (
+        <BlockIpModal isOpen={true} setIsOpen={() => setActiveModal(null)} />
+      )}
+
+      {activeModal === "DISABLE_ACCOUNT" && (
+        <DisableAccountModal
+          isOpen={true}
+          setIsOpen={() => setActiveModal(null)}
+        />
+      )}
     </div>
   );
 };

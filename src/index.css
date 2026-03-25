@@ -14,6 +14,7 @@
   --color-surface: #ffffff;
   --color-alt: #f3eeeb;
 
+
   --color-text-primary: #1e1a19;
   --color-text-secondary: #4a3f3c;
   --color-text-muted: #b69374;
@@ -49,7 +50,7 @@
   --shadow-check: 0px 1px 4px 0px #0000001f;
   --shadow-input: 0px 1px 3.4px 0px #00000040;
   --shadow-settings: 6px 6px 16.6px 0px #0000000d;
-  
+
 
   /* font */
   --font-primary: "Montserrat", sans-serif;
@@ -93,8 +94,10 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scroll-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -107,7 +110,8 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(250, 79, 25, 0.2); /* Using your theme color with opacity */
+  background: rgba(250, 79, 25, 0.2);
+  /* Using your theme color with opacity */
   border-radius: 10px;
   transition: background 0.3s ease;
 }
@@ -117,40 +121,36 @@
 }
 
 .custom-scrollbar {
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: rgba(250, 79, 25, 0.2) transparent; /* For Firefox */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: rgba(250, 79, 25, 0.2) transparent;
+  /* For Firefox */
 }
 
 .custom-scrollbar::-webkit-scrollbar-button {
-  display: none; /* Hide arrows */
+  display: none;
+  /* Hide arrows */
 }
 
 .border-line {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #432c2c 0%,
-    rgba(80, 28, 28, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%,
+      #432c2c 0%,
+      rgba(80, 28, 28, 0) 100%);
 }
 
 .gradient-border {
   border: 2px solid transparent;
-  border-image: linear-gradient(
-      139.7deg,
+  border-image: linear-gradient(139.7deg,
       #ff9000 4.46%,
       #6344e7 55.5%,
-      #fa4f19 106.54%
-    )
-    1;
+      #fa4f19 106.54%) 1;
 }
 
 .login-gradient {
-  background: linear-gradient(
-    324.47deg,
-    rgba(255, 248, 243, 0.5) 6.11%,
-    rgba(253, 251, 249, 0.5) 46.89%,
-    rgba(255, 239, 232, 0.5) 87.67%
-  );
+  background: linear-gradient(324.47deg,
+      rgba(255, 248, 243, 0.5) 6.11%,
+      rgba(253, 251, 249, 0.5) 46.89%,
+      rgba(255, 239, 232, 0.5) 87.67%);
 }
 
 .authside-gradient {
@@ -160,7 +160,7 @@
 }
 
 .mfa-gradient {
-  background: 
+  background:
     /* Top fade to handle the top edge of the image */
     linear-gradient(to bottom, #030001 0%, rgba(3, 0, 1, 0) 20%),
     /* Your existing bottom fade */
@@ -169,7 +169,8 @@
 
 /* Custom class to force asterisk masking */
 .input-password-asterisk {
-  -webkit-text-security: disc; /* Use 'disc' for dots, or 'square' */
+  -webkit-text-security: disc;
+  /* Use 'disc' for dots, or 'square' */
 }
 
 /* To specifically get Asterisks (*) */

@@ -3,7 +3,10 @@ import Table from "../../../shared/Table";
 import {
   AiChatIcon,
   ChevronRight1Icon,
+  DetailsIcon,
+  PlusIcon,
   ShieldIcon,
+  XIcon,
 } from "../../../utils/icons";
 import {
   SeverityIndicator,
@@ -102,73 +105,145 @@ const InprogressTable = ({ data }: TableProps) => {
       <Drawer
         isOpen={!!selectedIncident}
         onClose={() => setSelectedIncident(false)}
-        width="600px"
+        width="710px"
       >
-        <Drawer.Header title="Malicious Macro Doc" />
+        <Drawer.Header title="" />
 
-        <Drawer.Body>
-          {/* Contextual Metadata Section */}
-          <div className="mb-8">
-            <h3 className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-4">
+        <Drawer.Body className="flex flex-col gap-6">
+          {/* Header Section */}
+          <div className="flex justify-between items-start ">
+            <div>
+              <p className="text-xl text-text-primary font-normal">
+                Malicious Macro Doc
+              </p>
+              <p className="text-xs text-text-muted mt-1">
+                Aug 4, 2025 12:14 am
+              </p>
+              <div className="flex items-center gap-2 mt-4">
+                <span className="text-sm text=text-primary">Assigned to</span>
+                <div className="flex items-center gap-2 bg-alt pl-8 px-3 py-1 rounded-full text-sm">
+                  <span>Victor</span>
+                  <XIcon />
+                </div>
+              </div>
+            </div>
+            <div className="text-right">
+              <h3 className="text-base font-normal text-text-primary">
+                Reconnaissance
+              </h3>
+              <div className="flex gap-1 justify-end mt-1">
+                <div className="w-3 h-3 bg-orange-500 rounded-sm" />
+                <div className="w-3 h-3 bg-orange-500 rounded-sm" />
+                <div className="w-3 h-3 bg-orange-500 rounded-sm" />
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Info */}
+          <div className="  text-text-secondary text-xs">
+            <div className="flex justify-between ">
+              <span className=" ">Tools detected:</span>
+              <span className="">Nmap, Shodan queries</span>
+            </div>
+            <div className="flex justify-between ">
+              <span className="">Source IP:</span>
+              <span className="">192.172.1.2</span>
+            </div>
+            <div className="flex justify-between ">
+              <span className="">Time of Activity:</span>
+              <span className="">Aug 4, 2025 12:14 am</span>
+            </div>
+          </div>
+
+          {/* Contextual Metadata */}
+          <div className="">
+            <h4 className="text-text-primary font-normal text-base mb-4">
               Contextual Metadata
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm text-text-secondary">
-                  First Seen
-                </label>
-                <p className="text-sm font-medium">2 Days ago</p>
-              </div>
-              <div>
-                <label className="text-sm text-text-secondary">Source IP</label>
-                <p className="text-sm font-medium">192.172.1.2</p>
-              </div>
-              <div>
-                <label className="text-sm text-text-secondary">
-                  Attack Stage
-                </label>
-                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-700">
-                  High
+            </h4>
+            <div className="space-y-3">
+              {[
+                { label: "First Seen", value: "2 Days Ago" },
+                { label: "Last Seen", value: "3 Hours Ago" },
+                { label: "Frequency", value: "5" },
+                { label: "Attack Stage Confidence Level", value: "High" },
+                {
+                  label: "Tactics & Techniques",
+                  value: "T1595 - Active Scanning",
+                },
+                {
+                  label: "Geolocation of Source",
+                  value: "Abuja, Nigeria. MTN NG",
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex justify-between text-text-secondary text-xs"
+                >
+                  <span className="">{item.label}</span>
+                  <span className="text-right">{item.value}</span>
+                </div>
+              ))}
+              <div className="flex justify-between text-text-secondary text-xs">
+                <span className="">Historical Trend</span>
+                <span className="">
+                  Sparkline chart showing increase/decrease in reconnaissance
+                  attempts over time
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Relationships Section */}
-          <div className="mb-8">
-            <h3 className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-4">
+          {/* Relationships */}
+          <div className="">
+            <h4 className="text-base text-text-primary font-medium mb-4">
               Relationships to Other Events
-            </h3>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm">Linked Incident #492</span>
-                <span className="text-xs text-text-secondary">2 Days ago</span>
+            </h4>
+            <div className="space-y-3  text-text-secondary text-xs">
+              <div className="flex justify-between ">
+                <span className="">Linked Incidents</span>
+                <span className="">2 Days Ago</span>
+              </div>
+              <div className="flex justify-between  text-text-secondary text-xs">
+                <span className="">Progression Risk</span>
+                <span className="">3 Hours Ago</span>
+              </div>
+              <div className="flex justify-between  text-text-secondary text-xs">
+                <span className="">Related Vulnerabilities</span>
+                <span className="">5</span>
+              </div>
+              <div className="flex justify-between  text-text-secondary text-xs">
+                <span className="">Connected Asset Group</span>
+                <span className="">High</span>
+              </div>
+              <div className="flex justify-end">
+                <button className="text-primary-hover text-xs underline">
+                  View All Events from this IP
+                </button>
               </div>
             </div>
           </div>
 
           {/* Analyst Actions */}
           <div>
-            <h3 className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-4">
+            <h4 className="text-base text-text-primary font-normal mb-3">
               Analyst Actions
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              <button className="text-sm text-red-600 hover:text-red-700 font-medium">
-                Block IP / Domain
-              </button>
-              <button className="text-sm text-blue-600 hover:text-blue-700 font-medium">
-                Create Investigation Case
-              </button>
+            </h4>
+            <div className="flex flex-col gap-2 items-start text-primary-hover text-xs underline">
+              <button className=" ">Block IP / Domain</button>
+              <button className=" ">Create Investigation Case</button>
+              <button className="">Mark as Resolved</button>
+              <button className="">Run Playbook</button>
             </div>
           </div>
         </Drawer.Body>
 
-        <Drawer.Footer>
+        <Drawer.Footer className="border-t p-6 ">
           <button
-            className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark flex items-center gap-2"
+            className=" cursor-pointer flex items-center gap-2.5 px-6 py-3 border-2 border-text-secondary rounded-xl font-bold text-text-secondary shadow-button-default"
             onClick={viewDetails}
           >
-            View Full Details
+            <DetailsIcon />
+            View Details
           </button>
         </Drawer.Footer>
       </Drawer>

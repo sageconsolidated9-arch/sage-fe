@@ -77,7 +77,7 @@ const Drawer = ({
 
             {/* Drawer Panel */}
             <motion.div
-              className={`fixed h-[600px] bottom-0 z-50 bg-surface shadow-2xl flex flex-col ${
+              className={`fixed h-[890px] bottom-0 z-50 bg-surface shadow-2xl flex flex-col ${
                 position === "right" ? "right-0" : "left-0"
               }`}
               style={{ width, maxWidth: "100%" }}
