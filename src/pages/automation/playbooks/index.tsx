@@ -1,11 +1,12 @@
-import PlaybookPage from "../../../components/automation/playbook/PlaybookPage";
+import React from "react";
+import PlayBooksPage from "../../../components/automation/PlayBooksPage";
 
-const Playbook = () => {
+const index = () => {
   return (
-    <>
-      <PlaybookPage />
-    </>
+    <div>
+      <PlayBooksPage />
+    </div>
   );
 };
 
-export default Playbook;
+export default index;

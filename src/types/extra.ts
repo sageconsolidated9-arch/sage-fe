@@ -23,6 +23,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "white";
   iconPosition?: "left" | "right";
   height?: string;
+  width?: string;
   paddingX?: string;
   paddingY?: string;
   shadow?: string;

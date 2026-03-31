@@ -1,5 +1,3 @@
-import { Info } from "lucide-react";
-import { TrendingDown, TrendingUp } from "lucide-react"; // Or use your custom icons
 import { InfoCIcon, ProgressIcon, ResolvedIcon } from "../../../utils/icons";
 
 interface StatCardProps {
@@ -49,7 +47,7 @@ const StatusSummaryCard = () => {
       {/* Title Section */}
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-1.5 text-text-secondary text-base font-medium">
-          Alerts by Status <Info size={16} className="text-info-hover" />
+          Alerts by Status <InfoCIcon className="text-info-hover" />
         </div>
 
         <div className="flex items-center gap-6">
@@ -59,7 +57,7 @@ const StatusSummaryCard = () => {
               77
             </span>
             <div className="flex items-center gap-1 text-text-secondary text-sm">
-              <TrendingDown size={16} />
+              <ProgressIcon className="text-text-secondary w-4 h-4 -rotate-180" />
               <span>In Progress</span>
             </div>
           </div>
@@ -68,7 +66,7 @@ const StatusSummaryCard = () => {
           <div className="flex items-center gap-2">
             <span className="text-[32px] font-semibold text-success">92</span>
             <div className="flex items-center gap-1 text-text-secondary text-sm">
-              <TrendingUp size={16} />
+              <ResolvedIcon className="text-success w-4 h-4 rotate-180" />
               <span>Resolved</span>
             </div>
           </div>

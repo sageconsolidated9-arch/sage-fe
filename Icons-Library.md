@@ -67,6 +67,15 @@ Available icons for use in the application.
 - `InfoCIcon`
 - `ProgressIcon`
 - `ResolvedIcon`
+- `CloneIcon`
+- `DisableIcon`
+- `RunIcon`
+- `PauseIcon`
+- `MoreIcon`
+- `ImportIcon`
+- `ExportIcon`
+- `MarkIcon`
+- `DeleteIcon`
 
 ## Usage Example
 

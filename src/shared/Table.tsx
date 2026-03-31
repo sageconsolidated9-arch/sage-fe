@@ -251,7 +251,7 @@ const Table = <T extends TableData>({
       </div>
 
       {showFooter &&
-        !isLoading && ( // Hide footer when loading
+        !isLoading && ( 
           <TableFooter
             currentPage={currentPage}
             totalPages={totalPages}

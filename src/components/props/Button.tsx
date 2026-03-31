@@ -8,6 +8,7 @@ const Button: React.FC<ButtonProps> = ({
   iconPosition = "left",
   variant = "primary",
   height = "min-h-[52px]",
+  width = "w-fit",
   paddingX = "px-4",
   paddingY = "py-2",
   shadow = "shadow-button-default",
@@ -18,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   // Base classes that apply to all variants
-  const baseClasses = `${font} rounded-[12px] w-full transition-colors tracking-[2%] flex items-center justify-center gap-2 ${height} ${paddingX} ${paddingY} ${shadow} ${textSize} ${format}`;
+  const baseClasses = `${font} rounded-[12px]  transition-colors tracking-[2%] flex items-center justify-center gap-2 ${height} ${paddingX} ${paddingY} ${shadow} ${textSize} ${format} ${width}`;
 
   // Disabled classes (same for all variants)
   const disabledClasses =

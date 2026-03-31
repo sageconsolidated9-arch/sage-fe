@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import { useSidebarCounts } from "../hooks/useSidebarCounts";
 import { LogoIcon, LogoText, ToggleIcon } from "../utils/icons";
 import { useRef } from "react";
-
 import { sidebarVariants } from "./sidebar/variants";
 import { useSidebarStore } from "../store/sidebarStore";
 import type { SidebarRoute } from "../types/extra";

@@ -1,10 +1,8 @@
-import { Settings, ShieldAlert } from "lucide-react";
 import Table from "../../../shared/Table";
 import {
   AiChatIcon,
   ChevronRight1Icon,
   DetailsIcon,
-  PlusIcon,
   ShieldIcon,
   XIcon,
 } from "../../../utils/icons";
@@ -109,7 +107,7 @@ const InprogressTable = ({ data }: TableProps) => {
       >
         <Drawer.Header title="" />
 
-        <Drawer.Body className="flex flex-col gap-6">
+        <Drawer.Body className="flex flex-col gap-6 ">
           {/* Header Section */}
           <div className="flex justify-between items-start ">
             <div>

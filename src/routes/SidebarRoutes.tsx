@@ -20,33 +20,33 @@ const Notebooks = lazy(() => import("../pages/notebooks"));
 
 // Import child components
 const DetectionRuleLibrary = lazy(
-  () => import("../pages/rules/detection-rule")
+  () => import("../pages/rules/detection-rule"),
 );
 const RuleBuilderUI = lazy(() => import("../pages/rules/rule-builder"));
 const AnomalyModels = lazy(() => import("../pages/rules/anomaly-models"));
 const SecurityIntegrations = lazy(
-  () => import("../pages/integration/security-integrations")
+  () => import("../pages/integration/security-integrations"),
 );
 const IamIntegrations = lazy(
-  () => import("../pages/integration/iam-integrations")
+  () => import("../pages/integration/iam-integrations"),
 );
 const CommunicationIntegration = lazy(
-  () => import("../pages/integration/communication")
+  () => import("../pages/integration/communication"),
 );
 const ExportOptions = lazy(() => import("../pages/reporting/export-options"));
 const ComplianceReport = lazy(
-  () => import("../pages/reporting/compliance-report")
+  () => import("../pages/reporting/compliance-report"),
 );
 const ReportingDashboard = lazy(() => import("../pages/reporting/r-dashboard"));
 const ParserTransformer = lazy(
-  () => import("../pages/logs-data/parser-transformation")
+  () => import("../pages/logs-data/parser-transformation"),
 );
 const DataManagement = lazy(() => import("../pages/logs-data/data-management"));
 const Ingestion = lazy(() => import("../pages/logs-data/ingestion"));
 
 const Playbook = lazy(() => import("../pages/automation/playbooks"));
 const PlaybookEditor = lazy(
-  () => import("../pages/automation/playbook-editor")
+  () => import("../pages/automation/playbook-editor"),
 );
 const SageAi = lazy(() => import("../pages/automation/sage-ai"));
 const AdvancedLogSearch = lazy(() => import("../pages/hunting/advanced-log"));
@@ -54,10 +54,10 @@ const AttackPathVisualizer = lazy(() => import("../pages/hunting/attack-path"));
 const AiAssistedThreat = lazy(() => import("../pages/hunting/ai-assisted"));
 const TiFeeds = lazy(() => import("../pages/threat-intelligence/ti-feeds"));
 const EntityProfiles = lazy(
-  () => import("../pages/threat-intelligence/entity-profiles")
+  () => import("../pages/threat-intelligence/entity-profiles"),
 );
 const Indicators = lazy(
-  () => import("../pages/threat-intelligence/indicators")
+  () => import("../pages/threat-intelligence/indicators"),
 );
 
 export const SidebarRoutes: SidebarRoute[] = [
