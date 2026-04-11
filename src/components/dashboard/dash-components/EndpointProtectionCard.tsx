@@ -34,16 +34,19 @@ const EndpointProtectionCard = () => {
           <div className="mt-7 flex flex-wrap">
             <CoverageCount
               text="Protected"
-              count="1,110"
               textColor="text-success"
               borderColor="border-success"
-            />
+            >
+              1,110
+            </CoverageCount>
+
             <CoverageCount
               text="Unprotected"
-              count="24"
               textColor="text-warning"
               borderColor="border-warning"
-            />
+            >
+              24
+            </CoverageCount>
           </div>
         </Card.Body>
 

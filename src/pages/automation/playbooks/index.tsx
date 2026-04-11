@@ -1,5 +1,5 @@
 import React from "react";
-import PlayBooksPage from "../../../components/automation/PlayBooksPage";
+import PlayBooksPage from "../../../components/automation/playbook/PlayBooksPage";
 
 const index = () => {
   return (

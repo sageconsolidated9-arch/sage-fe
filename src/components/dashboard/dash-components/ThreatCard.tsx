@@ -32,16 +32,18 @@ const ThreatCard = () => {
           <div className="mt-7 flex flex-wrap">
             <CoverageCount
               text="Active"
-              count="13"
               textColor="text-success"
               borderColor="border-success"
-            />
+            >
+              13
+            </CoverageCount>
             <CoverageCount
               text="Inactive"
-              count="3"
               textColor="text-text-muted"
               borderColor="border-text-muted"
-            />
+            >
+              3
+            </CoverageCount>
           </div>
         </Card.Body>
 

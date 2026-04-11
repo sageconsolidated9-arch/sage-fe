@@ -209,6 +209,7 @@ const MyPlayBookTable = ({ data = mockPlayBook }: TableProps) => {
                 data={mockExecutionHistory}
                 columns={historyColumns}
                 showHeader={false}
+                showFooter={false}
                 className="bg-transparent"
               />
             </div>
