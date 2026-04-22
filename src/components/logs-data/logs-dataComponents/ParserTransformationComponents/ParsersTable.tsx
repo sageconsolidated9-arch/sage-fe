@@ -1,26 +1,30 @@
 import React, { useState } from "react";
+import type { ColumnDef } from "../../../../types/table";
 import {
   mockParser,
   StatusBadge,
   type Parser,
-} from "../../../utils/parserLibrary";
-import type { ColumnDef } from "../../../types/table";
+} from "../../../../utils/parserLibrary";
 import {
   ChevronDown1Icon,
+  DisableIcon,
+  EditIcon,
+  ExportIcon,
   ImportIcon,
   MarkIcon,
   MoreIcon,
-} from "../../../utils/icons";
-import Table from "../../../shared/Table";
-import CoverageCount from "../../dashboard/dash-components/CoverageCount";
-import Drawer from "../../props/Drawer";
-import Button from "../../props/Button";
-import TextArea from "../../props/TextArea";
+  ZapIcon,
+} from "../../../../utils/icons";
 import {
   mockFieldMapping,
   StatusBadges,
   type FieldMapping,
-} from "../../../utils/parserFieldMapping";
+} from "../../../../utils/parserFieldMapping";
+import CoverageCount from "../../../dashboard/dash-components/CoverageCount";
+import Table from "../../../../shared/Table";
+import Drawer from "../../../props/Drawer";
+import Button from "../../../props/Button";
+import TextArea from "../../../props/TextArea";
 
 interface TableProps {
   data?: Parser[];
@@ -130,8 +134,8 @@ const ParsersTable = ({ data = mockParser }: TableProps) => {
   ];
 
   return (
-    <>
-      <div className="flex items-center gap-12 py-7">
+    <div className=" bg-surface py-[27px] px-[30px] rounded-[18px] relative shadow-shadow-card z-10">
+      <div className="flex items-center gap-12 py-7 ">
         <CoverageCount
           text="Total Custom Parsers"
           borderColor="border-primary-hover"
@@ -167,14 +171,37 @@ const ParsersTable = ({ data = mockParser }: TableProps) => {
         </CoverageCount>
       </div>
 
-      <Table<Parser>
-        data={data}
-        columns={columns}
-        showHeader={false}
-        showCheckboxes={true}
-        showFooter={false}
-        className="bg-transparent"
-      />
+      <div>
+        <div className="pb-5 flex items-center gap-4">
+          <p className="text-text-primary text-base leading-6">
+            Parser Library
+          </p>
+          <>
+            {[
+              { Icon: EditIcon, label: "Edit" },
+              { Icon: ZapIcon, label: "Test " },
+              { Icon: ExportIcon, label: "Export" },
+              { Icon: DisableIcon, label: "Disable" },
+            ].map(({ Icon, label }) => (
+              <div
+                key={label}
+                className="flex items-center gap-2 cursor-pointer hover:opacity-80"
+              >
+                <Icon className="text-primary-hover" />
+                <p>{label}</p>
+              </div>
+            ))}
+          </>
+        </div>
+        <Table<Parser>
+          data={data}
+          columns={columns}
+          showHeader={false}
+          showCheckboxes={true}
+          showFooter={false}
+          className="bg-transparent"
+        />
+      </div>
 
       <Drawer
         isOpen={!!selectedParser}
@@ -279,7 +306,7 @@ const ParsersTable = ({ data = mockParser }: TableProps) => {
           </div>
         </Drawer.Body>
       </Drawer>
-    </>
+    </div>
   );
 };
 

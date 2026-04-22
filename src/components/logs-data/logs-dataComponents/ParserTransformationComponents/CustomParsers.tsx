@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import Button from "../../props/Button";
-import {
-  ChevronDown1Icon,
-  ExportIcon,
-  ImportIcon,
-  PlusIcon,
-  ResetIcon,
-} from "../../../utils/icons";
-import NewParserModal from "../logs-data-modals/NewParserModal";
+import Button from "../../../props/Button";
+import { ImportIcon, PlusIcon, ResetIcon } from "../../../../utils/icons";
+import NewParserModal from "../../logs-data-modals/NewParserModal";
 
 const CustomParsers = ({ activeTab }: { activeTab: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +18,7 @@ const CustomParsers = ({ activeTab }: { activeTab: string }) => {
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-4 ">
           <p className="text-text-primary text-xl">
-            {isLogsView ? "Sample Logs Viewer  " : "Custom Parsers"}
+            {isLogsView ? "Sample Logs Viewer " : "Custom Parsers"}
           </p>
           <p className="text-text-secondary text-xs">
             {isLogsView

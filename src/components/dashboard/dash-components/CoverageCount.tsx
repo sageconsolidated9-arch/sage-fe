@@ -18,7 +18,7 @@ const CoverageCount = ({
       <p className="text-[20px] text-text-primary">{text}</p>
 
       <p
-        className={`${textColor} font-bold text-[40px] leading-10 tracking-[-0.5%] mt-4`}
+        className={`${textColor} font-bold text-[40px] leading-10 tracking-[-0.5%] mt-2`}
       >
         {children}
       </p>

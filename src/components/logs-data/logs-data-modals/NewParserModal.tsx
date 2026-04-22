@@ -205,7 +205,6 @@ const NewParserModal = ({ isOpen, setIsOpen }: NewParserModalProps) => {
               </div>
               <div className="flex items-center gap-1">
                 <PlusIcon className="text-primary-hover" />
-
                 <p>Add New Mapping</p>
               </div>
             </div>

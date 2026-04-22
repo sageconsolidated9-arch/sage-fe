@@ -76,6 +76,12 @@ Available icons for use in the application.
 - `ExportIcon`
 - `MarkIcon`
 - `DeleteIcon`
+- `MonitorIcon`
+- `ReOrderIcon`
+- `AddCustomIcon`
+- `AchieveIcon`
+- `IntelIcon`
+- `ViewIcon`
 
 ## Usage Example
 
