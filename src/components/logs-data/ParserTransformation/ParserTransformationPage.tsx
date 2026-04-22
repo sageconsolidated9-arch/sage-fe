@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CustomParsers from "../logs-dataComponents/CustomParsers";
-import ParsersTableTabs from "../logs-dataComponents/ParsersTableTabs";
+import CustomParsers from "../logs-dataComponents/ParserTransformationComponents/CustomParsers";
+import ParsersTableTabs from "../logs-dataComponents/ParserTransformationComponents/ParsersTableTabs";
 
 const ParserTransformationPage = () => {
   const [activeTab, setActiveTab] = useState("parsers");

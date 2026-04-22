@@ -1,15 +1,9 @@
 import React from "react";
-import Tabs from "../../props/Tabs";
-import {
-  ChevronLeft1Icon,
-  ChevronRight1Icon,
-  DisableIcon,
-  EditIcon,
-  ExportIcon,
-  ZapIcon,
-} from "../../../utils/icons";
-import ParsersTable from "./ParsersTable";
+import Tabs from "../../../props/Tabs";
+
 import SampleLogsViewer from "./SampleLogsViewer";
+import ParsersTable from "./ParsersTable";
+import { ChevronLeft1Icon, ChevronRight1Icon } from "../../../../utils/icons";
 
 interface ParserTableTabsProps {
   activeTab: string;
@@ -35,29 +29,6 @@ const ParsersTableTabs = ({
             variant="underline"
             className="p-2"
           />
-
-          <div className="text-sm gap-6 flex items-center font-normal">
-            {activeTab === "parsers" ? (
-              <>
-                {[
-                  { Icon: EditIcon, label: "Edit" },
-                  { Icon: ZapIcon, label: "Test " },
-                  { Icon: ExportIcon, label: "Export" },
-                  { Icon: DisableIcon, label: "Disable" },
-                ].map(({ Icon, label }) => (
-                  <div
-                    key={label}
-                    className="flex items-center gap-1 cursor-pointer hover:opacity-80"
-                  >
-                    <Icon className="text-primary-hover" />
-                    <p>{label}</p>
-                  </div>
-                ))}
-              </>
-            ) : (
-              <>{/* Nothing to display */}</>
-            )}
-          </div>
         </div>
 
         <div className="flex items-center gap-2">

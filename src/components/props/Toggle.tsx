@@ -81,7 +81,7 @@ const Toggle: React.FC<ToggleButtonProps> = ({
       {label && (
         <span
           className={`
-            ml-3 font-medium
+            ml-2 font-medium
             ${currentSize.label}
             ${disabled ? "text-gray-400" : "text-gray-900"}
           `}

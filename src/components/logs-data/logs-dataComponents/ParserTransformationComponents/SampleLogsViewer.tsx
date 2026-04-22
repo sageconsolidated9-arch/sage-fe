@@ -1,6 +1,6 @@
 import React from "react";
-import { Select } from "../../props/Select";
-import { AiChatIcon, MarkIcon, MoreIcon } from "../../../utils/icons";
+import { Select } from "../../../props/Select";
+import { AiChatIcon, MarkIcon, MoreIcon } from "../../../../utils/icons";
 
 const SelectSource = [
   {
