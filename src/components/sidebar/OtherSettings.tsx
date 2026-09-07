@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { useSidebarStore } from "../../store/sidebarStore";
 import Button from "../../components/props/Button";
-import { ChevronUpDownIcon, PlusIcon, ThemesIcon } from "../../utils/icons";
+import { ChevronUpDownIcon, ThemesIcon } from "../../utils/icons";
 import Toggle from "../../components/props/Toggle";
 import { getImageSrc } from "../../utils/imageUtils";
 import ProfileModal from "./ProfileModal";
+import { useUserProfile } from "../../api/profile";
+import { getInitials } from "../../utils/getInitials";
 
 const OtherSettings = () => {
   const {
@@ -14,6 +16,7 @@ const OtherSettings = () => {
     closeProfileModal,
   } = useSidebarStore();
   const profileButtonRef = useRef<HTMLButtonElement>(null);
+  const { data: profile, isLoading, error, isError } = useUserProfile();
 
   const handleProfileIconClick = () => {
     if (profileButtonRef.current) {
@@ -109,23 +112,29 @@ const OtherSettings = () => {
         <div className="flex items-center gap-2">
           {/* Avatar */}
           <div className="relative w-10 aspect-square rounded-full p-0.5 bg-[linear-gradient(139.7deg,#FF9000_4.46%,#6344E7_55.5%,#FA4F19_106.54%)]">
-            <div className="w-full h-full rounded-full bg-white overflow-hidden">
-              <img
-                src={getImageSrc("avatar.png")}
-                className="w-full h-full object-cover"
-                alt="User avatar"
-              />
+            <div className="w-full h-full rounded-full bg-white overflow-hidden grid place-items-center">
+              {/* {imageUrl ? (
+                <img
+                  src={profile?.data.full_name}
+                  className="w-full h-full object-cover"
+                  alt={`${profile?.data?.full_name}'s avatar`}
+                />
+              ) : ( */}
+              <span className="font-semibold text-text-secondary">
+                {getInitials(profile?.data?.full_name)}
+              </span>
+              {/* )} */}
             </div>
           </div>
 
           {/* Name and Role */}
           {isSidebarOpen && (
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between text-left">
               <p className="text-xs leading-[100%] tracking-[2%] text-[#24222099]">
                 Product Designer
               </p>
               <p className="text-xs leading-[100%] tracking-[2%] text-[#242220] pt-1">
-                Andrew Smith
+                {profile?.data.full_name}
               </p>
             </div>
           )}

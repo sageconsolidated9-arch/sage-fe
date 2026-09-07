@@ -1,24 +1,27 @@
 import { create } from "zustand";
-
-// No token or session stored here — the browser manages the HttpOnly cookie.
-// This store only holds UI-level auth state your components need to react to.
+import { persist } from "zustand/middleware";
 
 interface ApiState {
   isAuthenticated: boolean;
   globalError: string | null;
-
   setIsAuthenticated: (value: boolean) => void;
   setGlobalError: (error: string | null) => void;
   clearAuth: () => void;
 }
 
-export const useApiStore = create<ApiState>()((set) => ({
-  isAuthenticated: false,
-  globalError: null,
-
-  setIsAuthenticated: (value) => set({ isAuthenticated: value }),
-  setGlobalError: (globalError) => set({ globalError }),
-
-  // Called on logout — just flips the flag; the backend clears the cookie
-  clearAuth: () => set({ isAuthenticated: false }),
-}));
+export const useApiStore = create<ApiState>()(
+  persist(
+    (set) => ({
+      isAuthenticated: false,
+      globalError: null,
+      setIsAuthenticated: (value) => set({ isAuthenticated: value }),
+      setGlobalError: (globalError) => set({ globalError }),
+      clearAuth: () => set({ isAuthenticated: false, globalError: null }),
+    }),
+    {
+      name: "auth-storage", // localStorage key
+      partialize: (state) => ({ isAuthenticated: state.isAuthenticated }),
+      // Only persist isAuthenticated, NOT globalError or anything sensitive
+    },
+  ),
+);
