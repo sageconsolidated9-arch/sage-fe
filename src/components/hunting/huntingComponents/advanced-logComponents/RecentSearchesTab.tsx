@@ -1,20 +1,15 @@
 import React, { useState } from "react";
 import {
   AiChatIcon,
-  CloneIcon,
   DeleteIcon,
   Details1Icon,
-  DisableIcon,
   EditIcon,
-  ExportIcon,
-  ForwardIcon,
   MarkIcon,
   ResetIcon,
   ScheduleIcon,
   Search1Icon,
   Share2Icon,
   SquaredInfoIcon,
-  ViewIcon,
   ZapIcon,
 } from "../../../../utils/icons";
 import Drawer from "../../../props/Drawer";

@@ -181,6 +181,7 @@ const IngestionDataSourceTable = ({
             </div>
           </div>
         </div>
+        
         <Table<IngestionDataSource>
           data={data}
           columns={columns}

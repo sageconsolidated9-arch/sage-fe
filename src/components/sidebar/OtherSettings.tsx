@@ -34,7 +34,7 @@ const OtherSettings = () => {
   return (
     <div className="">
       {/* Connect Data Section */}
-      {isSidebarOpen ? (
+      {/* {isSidebarOpen ? (
         <div className="">
           <div className="border border-[#2422208F] bg-white/12 py-6 px-4 rounded-[28px] w-[246px] mx-auto grid place-items-center gap-y-5">
             <div>
@@ -75,7 +75,7 @@ const OtherSettings = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Themes Section */}
       <div className="flex items-center justify-between mt-6">
