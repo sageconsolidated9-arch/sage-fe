@@ -93,6 +93,11 @@ Available icons for use in the application.
 - `Details1Icon`
 - `FiltersIcon`
 - `InfoDownIcon`
+- `SettingsIcon`
+- `Refresh2Icon`
+- `CreateExportIcon`
+- `Schedule2Icon`
+- `Import2Icon`
 
 ## Usage Example
 

@@ -116,7 +116,7 @@ export const SidebarRoutes: SidebarRoute[] = [
         component: Indicators,
       },
       {
-        name: "Anomaly Models",
+        name: "Entity Profiles",
         path: "/threat-intelligence/entity-profiles",
         component: EntityProfiles,
       },
